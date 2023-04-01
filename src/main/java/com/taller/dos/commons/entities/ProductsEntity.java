@@ -6,15 +6,19 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Builder
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "products")
 public class ProductsEntity {
-	
+			
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
@@ -22,7 +26,7 @@ public class ProductsEntity {
 	private String code;
 	
 	private String name;
-	
+		
 	/*@OneToMany(cascade = CascadeType.ALL, mappedBy = "products", targetEntity = SalesEntity.class)
 	private Set<SalesEntity> salesEntity;*/
 	
@@ -36,4 +40,6 @@ public class ProductsEntity {
 	public void prePersist() {
 		this.quantity = 1;
 	}
+
+
 }

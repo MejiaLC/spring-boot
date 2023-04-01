@@ -20,7 +20,7 @@ import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api")
-public class ProductsController {
+public class ProductsCommandsController {
 	
 	@Autowired
 	private ProductsCommandsService productService;
