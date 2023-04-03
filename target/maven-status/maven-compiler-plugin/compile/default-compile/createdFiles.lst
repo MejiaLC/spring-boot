@@ -1,0 +1,11 @@
+com\taller\dos\queries\api\SalesQueryController.class
+com\taller\dos\commands\api\SalesCommandsController.class
+com\taller\dos\commands\domain\services\SalesCommandsService.class
+com\taller\dos\commons\entities\ProductsEntity.class
+com\taller\dos\queries\infrastructure\dto\SalesPresentationDto.class
+com\taller\dos\commands\infrastructure\dto\NewSalesDto.class
+com\taller\dos\commands\infrastructure\dto\UpdateSalesDto.class
+com\taller\dos\commons\entities\SalesEntity.class
+com\taller\dos\queries\domain\services\SalesQueriesService.class
+com\taller\dos\AppApplication.class
+com\taller\dos\commands\domain\repositories\SalesCommandsRepository.class

@@ -9,4 +9,6 @@ import io.reactivex.rxjava3.core.Maybe;
 public interface SalesQueriesService {
 
 	Maybe<List<SalesPresentationDto>> findAll();
+	
+	Maybe<List<SalesPresentationDto>> findAllByStates();
 }

@@ -14,13 +14,17 @@ import io.reactivex.rxjava3.core.Maybe;
 @RestController
 @RequestMapping("/api")
 public class SalesQueryController {
-	
+
 	@Autowired
 	private SalesQueriesService salesQueryService;
 
 	@GetMapping("/list")
-	public Maybe<ResponseEntity<?>> findAll(){
+	public Maybe<ResponseEntity<?>> findAll() {
 		return salesQueryService.findAll().map(list -> new ResponseEntity<>(list, HttpStatus.OK));
-		
+	}
+	
+	@GetMapping("/list_pendings")
+	public Maybe<ResponseEntity<?>> findAllByStates() {
+		return salesQueryService.findAllByStates().map(list -> new ResponseEntity<>(list, HttpStatus.OK));
 	}
 }

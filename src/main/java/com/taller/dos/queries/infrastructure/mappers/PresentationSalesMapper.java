@@ -15,7 +15,10 @@ public class PresentationSalesMapper {
 		return SalesPresentationDto.builder()
 				.states(entity.getStates())
 				.flete(entity.getFlete())
-				.productsEntity(entity.getProductsEntity())
+				.code(entity.getCode())
+				.total_cost(entity.getTotal_cost())
+				.total_value(entity.getTotal_value())
+				.products(entity.getProductsEntity())
 				.build();
 	}
 	

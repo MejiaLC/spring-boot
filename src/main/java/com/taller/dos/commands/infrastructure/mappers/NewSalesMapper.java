@@ -12,7 +12,11 @@ public class NewSalesMapper {
 		return SalesEntity.builder()
 				.states(dto.getStates())
 				.flete(dto.getFlete())
-				.productsEntity(dto.getProductsEntity())
+				.productsEntity(dto.getProduct_id())
+				.quantity(dto.getQuantity())
+				.code(dto.getCode())
+				.total_cost(dto.getTotal_cost())
+				.total_value(dto.getTotal_value())
 				.build();
 	}
 }
